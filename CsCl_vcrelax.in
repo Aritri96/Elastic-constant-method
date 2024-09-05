@@ -1,0 +1,61 @@
+&CONTROL
+  calculation = 'vc-relax'
+  etot_conv_thr =   4.8000000000d-06
+  forc_conv_thr =   1.0000000000d-05
+  outdir = './out/'
+  pseudo_dir = './'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+  nstep = 200
+/
+&SYSTEM
+  degauss =   7.3498618000d-03
+  ecutrho =   10.000000000d+02
+  ecutwfc =   12.00000000000d+01
+    ibrav = 0
+    nat   = 16
+    ntyp  = 2
+  nosym = .false.
+  occupations = 'smearing'
+  smearing = 'cold'
+/
+&ELECTRONS
+  conv_thr =   9.6000000000d-09
+  electron_maxstep = 200
+  mixing_beta =   4.0000000000d-01
+/
+&IONS
+    ion_dynamics = "bfgs"
+/
+
+&CELL
+press_conv_thr = 2.0000000000d-01
+/
+CELL_PARAMETERS {angstrom}
+8.287400   0.000000   0.000000
+  0.000000   8.287400   0.000000
+  0.000000   0.000000   8.287400
+ATOMIC_SPECIES
+Cs    132.90545  Cs.upf
+Cl     35.45270  Cl.upf
+ATOMIC_POSITIONS {angstrom}
+Cs      0.000000   0.000000   0.000000
+Cl      2.071849   2.071849   2.071849
+Cs     0.000000   0.000000   4.143698
+Cl     2.071849   2.071849   6.215548
+Cs     0.000000   4.143698   0.000000
+Cl     2.071849   6.215548   2.071849
+Cs     0.000000   4.143698   4.143698
+Cl     2.071849   6.215548   6.215548
+Cs     4.143698   0.000000   0.000000
+Cl     6.215548   2.071849   2.071849
+Cs     4.143698   0.000000   4.143698
+Cl     6.215548   2.071849   6.215548
+Cs     4.143698   4.143698   0.000000
+Cl     6.215548   6.215548   2.071849
+Cs     4.143698   4.143698   4.143698
+Cl     6.215548   6.215548   6.215548
+
+K_POINTS {automatic}
+4 4 4 0 0 0
