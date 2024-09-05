@@ -1,0 +1,75 @@
+&CONTROL
+  calculation = 'vc-relax'
+  etot_conv_thr =   4.8000000000d-06
+  forc_conv_thr =   1.0000000000d-05
+  outdir = './out/'
+  pseudo_dir = './'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+  nstep = 200
+/
+&SYSTEM
+  degauss =   7.3498618000d-03
+  ecutrho =   10.000000000d+02
+  ecutwfc =   12.00000000000d+01
+    ibrav                     = 0
+    nat                       = 24
+    nspin                     = 2
+    ntyp                      = 3
+    occupations               = "smearing"
+    smearing                  = "gaussian"
+    starting_magnetization(1) =  0.00000e+00
+    starting_magnetization(2) =  2.00000e-01
+    starting_magnetization(3) =  0.00000e+00
+/
+&ELECTRONS
+  conv_thr =   9.6000000000d-09
+  electron_maxstep = 200
+  mixing_beta =   4.0000000000d-01
+/
+&IONS
+    ion_dynamics = "bfgs"
+/
+
+&CELL
+press_conv_thr = 2.0000000000d-01
+/
+ATOMIC_SPECIES
+Ca     40.07800  Ca.upf
+Mo     95.94000  Mo.upf
+O      15.99940  O.upf
+CELL_PARAMETERS {angstrom}
+  5.229840   0.000000   0.000000
+  0.000000   5.229840   0.000000
+  0.000000   0.000000  11.378500
+
+ATOMIC_POSITIONS {angstrom}
+Ca    0.000000   0.000000   5.689247
+Ca    0.000000   2.614922   8.533870
+Ca    2.614922   2.614922   0.000000
+Ca    2.614922   0.000000   2.844623
+Mo    0.000000   0.000000   0.000000
+Mo    0.000000   2.614922   2.844623
+Mo    2.614922   2.614922   5.689247
+Mo    2.614922   0.000000   8.533870
+O     0.786429   1.350614   3.813604
+O     3.879230   3.401351   6.658228
+O     1.828492   1.264308   9.502851
+O     3.965535   4.443414   0.968981
+O     4.443414   1.264308  10.409513
+O     1.350614   4.443414   7.564890
+O     3.401351   1.350614   4.720266
+O     1.264308   3.401351   1.875643
+O     3.401351   3.965535   9.502851
+O     1.264308   0.786429   0.968981
+O     4.443414   3.879230   3.813604
+O     1.350614   1.828492   6.658228
+O     1.828492   3.879230   4.720266
+O     3.965535   1.828492   1.875643
+O     0.786429   3.965535  10.409513
+O     3.879230   0.786429   7.564890
+
+
+K_POINTS {automatic}
+6 6 2 0 0 0
