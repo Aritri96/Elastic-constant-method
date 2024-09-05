@@ -1,0 +1,68 @@
+&CONTROL
+  calculation = 'vc-relax'
+  etot_conv_thr =   4.8000000000d-06
+  forc_conv_thr =   1.0000000000d-05
+  outdir = './out/'
+  pseudo_dir = './'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+  nstep = 200
+/
+&SYSTEM
+  degauss =   7.3498618000d-03
+  ecutrho =   9.000000000d+02
+  ecutwfc =   10.00000000000d+01
+    ibrav       = 0
+    nat         = 20
+    ntyp        = 2
+  nosym = .false.
+  occupations = 'smearing'
+  smearing = 'cold'
+/
+&ELECTRONS
+  conv_thr =   9.6000000000d-09
+  electron_maxstep = 200
+  mixing_beta =   4.0000000000d-01
+/
+&IONS
+    ion_dynamics = "bfgs"
+/
+
+&CELL
+press_conv_thr = 2.0000000000d-01
+/
+ATOMIC_SPECIES
+Ga   69.72300  Ga.upf
+O    15.99940  O.upf
+ATOMIC_POSITIONS {angstrom}
+Ga    0.010981   0.000000   4.490818
+Ga   10.885362   0.000000   1.159531
+Ga    6.151217   1.523784   4.490818
+Ga    4.745125   1.523784   1.159531
+Ga    1.514982   1.523784   1.778336
+Ga    9.381361   1.523784   3.872013
+Ga    7.655218   0.000000   1.778336
+Ga    3.241124   0.000000   3.872013
+O    -0.985513   1.523784   4.200107
+O    11.881856   1.523784   1.450242
+O     5.154723   0.000000   4.200107
+O     5.741619   0.000000   1.450242
+O     1.869116   0.000000   0.616759
+O     9.027227   0.000000   5.033590
+O     8.009352   1.523784   0.616759
+O     2.886990   1.523784   5.033590
+O     1.349494   0.000000   3.182447
+O     9.546848   0.000000   2.467902
+O     7.489731   1.523784   3.182447
+O     3.406611   1.523784   2.467902
+
+
+
+
+CELL_PARAMETERS {angstrom}
+ 12.280500   0.000000   0.000000
+  0.000000   3.047570   0.000000
+ -1.384097   0.000000   5.650357
+K_POINTS {automatic}
+2 8 4 0 0 0
